@@ -55,6 +55,6 @@ public class SubjectReservationController {
     @GetMapping("/test")
     @ResponseStatus(HttpStatus.OK)
     public String test() {
-        return String.format("Hello, %s.", name);
+        return String.format("Hello, 12Factor config %s.", name);
     }
 }
