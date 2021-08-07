@@ -166,14 +166,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: bazsup
+        username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@v3
       with:
-        images: ghcr.io/bazsup/subject-api
+        images: ghcr.io/${{ github.actor }}/subject-api
         tags: |
           type=sha
         flavor: |
